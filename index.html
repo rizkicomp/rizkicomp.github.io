@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizki Romadona Prabowo - Technical Portfolio</title>
+    <style>
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --tech-blue: #004085; /* Biru Gelap Engineer */
+            --accent-blue: #007bff; /* Biru Terang Link */
+            --panel-gray: #dee2e6;
+            --bg-color: #f4f6f9;
+            --text-dark: #212529;
+            --code-font: 'Consolas', 'Monaco', 'Courier New', monospace; /* Font Koding */
+            --body-font: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            border-top: 6px solid var(--tech-blue);
+        }
+
+        /* --- HEADER SECTION (Industrial ID Style) --- */
+        header {
+            background: #fff;
+            padding: 40px 0;
+            border-bottom: 2px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--tech-blue);
+        }
+
+        .job-titles {
+            font-family: var(--code-font);
+            font-size: 1rem;
+            background-color: var(--tech-blue);
+            color: #fff;
+            padding: 8px 12px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .contact-box {
+            text-align: right;
+            font-family: var(--code-font);
+            font-size: 0.9rem;
+            border-left: 4px solid var(--panel-gray);
+            padding-left: 15px;
+        }
+
+        .contact-box a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            margin: 40px 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--text-dark);
+            padding-bottom: 10px;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding-right: 15px;
+            background: var(--bg-color);
+        }
+
+        .section-line {
+            flex-grow: 1;
+            height: 2px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ccc,
+                #ccc 10px,
+                #fff 10px,
+                #fff 20px
+            );
+        }
+
+        /* --- PROJECT CARDS (Engineering Log Style) --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        .card-top {
+            background-color: var(--panel-gray);
+            padding: 8px 15px;
+            font-family: var(--code-font);
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body h3 {
+            margin-top: 0;
+            color: var(--tech-blue);
+            font-size: 1.3rem;
+        }
+
+        .tech-list {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-badge {
+            font-family: var(--code-font);
+            font-size: 0.75rem;
+            background: #eef2f7;
+            color: var(--tech-blue);
+            padding: 4px 8px;
+            border: 1px solid #b8daff;
+        }
+
+        /* --- SKILLS TABLE (Spec Sheet) --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-box {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .skill-box h3 {
+            margin-top: 0;
+            border-bottom: 2px solid var(--tech-blue);
+            padding-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .skill-list {
+            list-style: square;
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .skill-list li {
+            margin-bottom: 5px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #fff;
+            border-top: 1px solid #ccc;
+            color: #666;
+            margin-top: 50px;
+            font-family: var(--code-font);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-grid { grid-template-columns: 1fr; text-align: center; }
+            .contact-box { text-align: center; border-left: none; margin-top: 15px; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-grid">
+                <div>
+                    <h1>Rizki Romadona Prabowo</h1>
+                    <div class="job-titles">
+                        SYSTEM ADMINISTRATOR | SENIOR IT SUPPORT | FULL STACK DEVELOPER
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <p>E: <a href="mailto:rizkid10x3@gmail.com">rizkid10x3@gmail.com</a></p>
+                    <p>LOC: Indonesia</p>
+                    <p>STATUS: <strong>AVAILABLE FOR HIRE</strong></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <div class="section-header">
+                <h2>Operational Summary</h2>
+                <div class="section-line"></div>
+            </div>
+            <p style="max-width: 900px;">
+                Spesialis IT dengan pengalaman mendalam dalam integrasi <strong>Shop Floor to Top Floor</strong>. Memiliki kemampuan unik menghubungkan mesin produksi (Hardware/IoT) langsung ke sistem Enterprise (SAP) untuk otomatisasi data. Ahli dalam manajemen infrastruktur server (Virtualization/Containerization), troubleshooting sistem kritis, dan pengembangan aplikasi *full-stack* untuk kebutuhan industri logistik dan manufaktur.
+            </p>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Project Integration Log</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <span>INTEGRATION</span>
+                        <span>SAP - MACHINE - PYTHON</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Shop Floor Takt Time & SAP Integration</h3>
+                        <p>Mengintegrasikan data mesin produksi dengan SAP ERP secara <em>real-time</em>. Mengembangkan sistem pencatatan "Takt Time" otomatis yang menghitung siklus produksi dan mengirimkan data langsung ke SAP via RFC. Menghilangkan input manual dan memastikan akurasi data material master.</p>
+                        <div class="tech-list">
+                            <span class="tech-badge">Python PyRFC</span>
+                            <span class="tech-badge">SAP Integration</span>
+                            <span class="tech-badge">Industrial PC</span>
+                            <span class="tech-badge">Automation Logic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <span>HARDWARE / IOT</span>
+                        <span>SENSOR & MONITORING</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Autonics Temperature Control System</h3>
+                        <p>Membangun jembatan komunikasi antara sensor suhu Autonics dan dashboard monitoring IT. Menggunakan protokol komunikasi serial untuk membaca parameter suhu mesin dan memberikan peringatan dini (Early Warning System) sebelum terjadi <em>overheat</em>.</p>
+                        <div class="tech-list">
+                            <span class="tech-badge">Autonics Controller</span>
+                            <span class="tech-badge">Modbus RS485</span>
+                            <span class="tech-badge">Python Serial</span>
+                            <span class="tech-badge">Hardware Config</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <span>SYSADMIN</span>
+                        <span>VIRTUALIZATION & SERVERS</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Server Virtualization & Containerization</h3>
+                        <p>Manajemen infrastruktur server fisik dan virtual. Migrasi dan pengelolaan aplikasi menggunakan teknologi Container (Docker) untuk efisiensi resource, serta manajemen VM untuk isolasi lingkungan Development dan Production SAP/Web.</p>
+                        <div class="tech-list">
+                            <span class="tech-badge">Proxmox / VMware</span>
+                            <span class="tech-badge">Docker Containers</span>
+                            <span class="tech-badge">Linux (Debian/Ubuntu)</span>
+                            <span class="tech-badge">SAP Basis Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <span>FULL STACK</span>
+                        <span>WEB APPLICATION</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Logistics Management System</h3>
+                        <p>Pengembangan aplikasi web <em>end-to-end</em> untuk Abel Trans Logistics. Sistem mencakup manajemen manifest, tracking pengiriman multi-moda, dan integrasi domain publik dengan keamanan SSL/HTTPS.</p>
+                        <div class="tech-list">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Nginx Web Server</span>
+                            <span class="tech-badge">Ubuntu Server</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <h2>Technical Competencies</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                
+                <div class="skill-box">
+                    <h3>Server & Virtualization</h3>
+                    <ul class="skill-list">
+                        <li><strong>OS:</strong> Linux (Debian, Ubuntu, SUSE Enterprise), Windows Server.</li>
+                        <li><strong>Virtualization:</strong> VMware ESXi, Proxmox VE.</li>
+                        <li><strong>Containerization:</strong> Docker, Docker Compose, LXC.</li>
+                        <li><strong>Web Server:</strong> Nginx (Reverse Proxy, Load Balancing), Apache.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-box">
+                    <h3>SAP & Enterprise Systems</h3>
+                    <ul class="skill-list">
+                        <li><strong>Integration:</strong> RFC Connection, PyRFC (Python to SAP), IDoc Monitoring.</li>
+                        <li><strong>Basis Tasks:</strong> User Management, Spool Administration, System Trace/Logs Analysis.</li>
+                        <li><strong>Troubleshooting:</strong> Short Dumps Analysis (ST22), Performance Tuning.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-box">
+                    <h3>Programming & Development</h3>
+                    <ul class="skill-list">
+                        <li><strong>Backend:</strong> Python (Automation Scripting), PHP (Web Apps).</li>
+                        <li><strong>Frontend:</strong> HTML5, CSS3, Javascript (Basic).</li>
+                        <li><strong>Database:</strong> MySQL/MariaDB, Basic SAP HANA SQL.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-box">
+                    <h3>Hardware & Network</h3>
+                    <ul class="skill-list">
+                        <li><strong>IoT:</strong> Sensor Integration (Autonics), Serial Comm (RS232/485).</li>
+                        <li><strong>Networking:</strong> Mikrotik Config, VLAN Management, VPN/Tunneling.</li>
+                        <li><strong>Support:</strong> Hardware Troubleshooting, Cabling, CCTV Integration.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p><strong>RIZKI ROMADONA PRABOWO</strong> &mdash; PORTFOLIO 2026</p>
+        <p>Built with Pure HTML & CSS | Lightweight & Fast</p>
+    </footer>
+
+</body>
+</html>
